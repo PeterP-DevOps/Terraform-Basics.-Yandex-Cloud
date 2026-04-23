@@ -26,14 +26,17 @@
 │   15: resource "yandex_compute_instance" "platform" {
 ```
 
-Ошибка Platform "standart-v4" not found возникает из‑за опечатки в названии платформы — вы указали standart-v4, но правильное название в Yandex Cloud — standard-v4  
+Ошибка Platform "standart-v4" not found возникает из‑за опечатки в названии платформы — standart-v4, но правильное название в Yandex Cloud — standard-v4  
 
+```
 ╷
 │ Error: Error while requesting API to create instance: client-request-id = 3ce97dc0-7676-4561-89ec-96ac6209ae9c client-trace-id = 325c96cd-35e8-4816-8886-4e6ced4bcdf3 rpc error: code = FailedPrecondition desc = Platform "standard-v4" not found
 │ 
 │   with yandex_compute_instance.platform,
 │   on main.tf line 15, in resource "yandex_compute_instance" "platform":
 │   15: resource "yandex_compute_instance" "platform" {
+
+```
 
 Ошибка означает, что в yandex_compute_instance указан platform_id = "standard-v4", но для нашего облака/зоны такой платформы нет или она не поддерживается в текущем каталоге/фолдере.
 Надо замненить standard-v4 на доступную платформу: standard-v3 или standard-v2.
