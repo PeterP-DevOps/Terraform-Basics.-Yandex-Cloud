@@ -12,6 +12,6 @@ provider "yandex" {
   cloud_id                 = "b1g98nk37d2anoqnj3ve"
   folder_id                = "b1g15ehoqojfquk256hr"
   zone                     = var.default_zone
-  service_account_key_file = file("./authorized_key.json")
+  service_account_key_file = "/home/ppg/authorized_key2.json"
 
 }
