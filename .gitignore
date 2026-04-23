@@ -10,3 +10,4 @@
 
 # own secret vars store.
 personal.auto.tfvarsauthorized_key.json
+authorized_key.json
